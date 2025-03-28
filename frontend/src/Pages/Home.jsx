@@ -1,6 +1,6 @@
 import React from 'react';
-import HeroSection from '../components/layout/HeroSection';
-import Steps from '../components/layout/Steps';
+import HeroSection from '../components/layout/HeroSection.jsx';
+import Steps from '../components/layout/Steps.jsx';
 
 const Home = () => {
     return (

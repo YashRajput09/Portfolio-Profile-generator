@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/layout/Navbar';
-import HeroSection from './components/layout/HeroSection';
-import CreatePortfolio from './pages/CreatePortfolio';
-import Home from './pages/Home';
-import Footer from './components/layout/Footer';  
+import Navbar from './components/layout/Navbar.jsx';
+import CreatePortfolio from './pages/CreatePortfolio.jsx';
+import Home from './pages/Home.jsx';
+import Footer from './components/layout/Footer.jsx';  
 
 const App = () => {
   return (
