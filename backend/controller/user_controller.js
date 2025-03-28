@@ -1,5 +1,5 @@
 import userModel from "../models/user_model.js";
-import cloudinary from "../cloudConfig.js";
+import cloudinary from "../cloudconfig.js";
 import bcrypt from "bcryptjs";
 import createTokenAndSaveCookie from "../jwt/AuthenticateToken.js";
 import mongoose from "mongoose";
