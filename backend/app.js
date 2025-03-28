@@ -4,8 +4,9 @@ import express from 'express';
 import session from 'express-session'
 import mongoose from 'mongoose';
 import fileUpload from 'express-fileupload';
-// import userRoute from './routes/user_route.js'
+import userRoute from './routes/user_route.js'
 // import blogRoute from './routes/blog_route.js'
+import portfolioRoute from './routes/portfolio_routes.js'
 import cookieParser from 'cookie-parser';
 import cors from "cors";
 // import recommadedRoute from './routes/recommendation_route.js';
@@ -70,12 +71,10 @@ async function dbConnection() {
 }
 dbConnection();
 
-app.use('/',(req, res) =>{
-    res.send("jai shree ganesh");
-})
 
 // ROUTES
-// app.use("/user", userRoute);
-// app.use("/blog", blogRoute);
+app.use("/user", userRoute);
+app.use("/portfolio", portfolioRoute);
+
 // app.use("/blog/recommanded", recommadedRoute);
 
