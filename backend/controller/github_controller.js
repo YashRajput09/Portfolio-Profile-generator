@@ -4,7 +4,7 @@ import axios from "axios";
 import { generateToken } from "../utils/generateToken.js";
 
 export const githubAuth = (req, res) => {
-  const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}&redirect_uri=${process.env.GITHUB_REDIRECT_URI}&scope=user:email`;
+  const githubAuthUrl =  `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}&redirect_uri=${process.env.GITHUB_REDIRECT_URI}&scope=user:email`;
   res.redirect(githubAuthUrl);
 };
 
@@ -41,7 +41,7 @@ export const githubCallback = async (req, res) => {
       console.log("🔹 Requesting Email...");
       const emailResponse = await axios.get("https://api.github.com/user/emails", {
         headers: { Authorization: `Bearer ${accessToken}` }
-      });
+    });
   
       const primaryEmail = emailResponse.data.find(email => email.primary).email;
   
