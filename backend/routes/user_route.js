@@ -12,7 +12,8 @@ import { isAuthenticated } from "../middleware/authenticateUser.js";
 import { isAdmin } from "../middleware/authorizeUser.js";
 import { saveRedirectUrl } from "../middleware/redirectUrl.js";
 import { linkedinAuth, linkedinCallback } from "../controller/linkdin_controller.js";
-import { get } from "mongoose";
+import { githubAuth, githubCallback } from "../controller/github_controller.js";
+
 const router = express.Router();
 
 router
@@ -44,4 +45,7 @@ router.route("/resetpassword")
 
 router.route("/linkedin/auth").get( linkedinAuth)
 router.route("/linkedin/auth/callback").get( linkedinCallback)
+
+router.route("/github/auth").get(githubAuth);
+router.route("/github/auth/callback").get(githubCallback);
 export default router;
