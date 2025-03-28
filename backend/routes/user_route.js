@@ -12,6 +12,7 @@ import { isAuthenticated } from "../middleware/authenticateUser.js";
 import { isAdmin } from "../middleware/authorizeUser.js";
 import { saveRedirectUrl } from "../middleware/redirectUrl.js";
 import { linkedinAuth, linkedinCallback } from "../controller/linkdin_controller.js";
+import { get } from "mongoose";
 const router = express.Router();
 
 router
@@ -41,6 +42,6 @@ router.route("/forgotpassword")
 router.route("/resetpassword")
   .post(resetPassword)
 
-router.route("/linkdin/auth").get( linkedinAuth)
-router.route("/linkdin/auth/callback").get( linkedinCallback)
+router.route("/linkedin/auth").get( linkedinAuth)
+router.route("/linkedin/auth/callback").get( linkedinCallback)
 export default router;
