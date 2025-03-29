@@ -12,10 +12,13 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.0.17",
     "autoprefixer": "^10.4.21",
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
     "lucide-react": "^0.484.0",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2",
     "react-router-dom": "^7.4.0",
     "tailwindcss": "^4.0.17"
   },
